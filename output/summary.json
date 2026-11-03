@@ -1,7 +1,7 @@
 {
   "companies_configured": 51,
   "date_unverified_role_location_matches": 0,
-  "first_run": true,
+  "first_run": false,
   "first_run_baseline": false,
   "jobs_fetched": 525,
   "matching_india_global_locations": 7,
@@ -10,7 +10,7 @@
   "matching_with_usable_publication_time": 7,
   "new_matches": 0,
   "scan_anomalies": [],
-  "scanned_utc": "2026-11-03T03:26:01.766078+00:00",
+  "scanned_utc": "2026-11-03T03:30:02.004984+00:00",
   "sources_degraded": 1,
   "sources_empty": 5,
   "sources_needing_adapter_or_failed": 21,
