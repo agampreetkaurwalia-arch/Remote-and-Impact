@@ -1,0 +1,61 @@
+name: Remote Anywhere Radar - morning and evening
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '11 8,20 * * *'
+      timezone: 'Asia/Kolkata'
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: remote-anywhere-radar
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout separate remote radar repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: true
+      - name: Python 3.12
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+      - name: Offline preflight tests
+        run: python -m unittest discover -s tests -v
+      - name: Scan live company career pages
+        run: python remote_radar.py
+      - name: Email morning/evening digest through GitHub Issues
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python notify.py
+      - name: Save successful scan and job history
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p state
+          cp output/next_state.json state/seen.json
+          git config user.name 'remote-job-radar-bot'
+          git config user.email 'remote-job-radar-bot@users.noreply.github.com'
+          git add state/seen.json output/current_24h.csv output/new_jobs.csv output/source_health.csv output/summary.json output/email.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Remote radar $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase origin "${GITHUB_REF_NAME}"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+      - name: Show scan status in GitHub Actions
+        if: always()
+        shell: bash
+        run: |
+          if [ -f output/summary.json ]; then
+            echo '## Remote Anywhere Radar — live run' >> "$GITHUB_STEP_SUMMARY"
+            echo '```json' >> "$GITHUB_STEP_SUMMARY"
+            cat output/summary.json >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
