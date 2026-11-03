@@ -129,7 +129,7 @@ TITLE_REGION_RESTRICTED = re.compile(
     r'North America|Europe|Canada|Australia)(?:\s+only)?\s*(?:$|[),—–])', re.I)
 
 
-def remote_region(job, *, assumed_global=False):
+def remote_region(job, *, assumed_global=False, locations_are_advertising_only=False):
     """Return India/Global only on job evidence or explicitly audited company policy.
 
     assumed_global is an opt-in per company, never a general rule for all
@@ -146,13 +146,26 @@ def remote_region(job, *, assumed_global=False):
               or re.search(r'\b(?:anywhere|world\s*-?\s*wide)\b', loc, re.I))
     if not remote:
         return ''
-    if india:
-        return 'India'
     if TITLE_REGION_RESTRICTED.search(title):
         return ''
+    if locations_are_advertising_only:
+        # Only for an employer that explicitly says listing locations are
+        # advertising labels, not hiring restrictions (e.g. Doist).
+        return 'Global / Anywhere'
+    if india:
+        return 'India'
     if RESTRICTED_RX.search(loc) or re.search(
         r'\banywhere\s+(?:in|within|across)\s+(?:the\s+)?(?:US|USA|United States|UK|EU|Europe|Canada|Australia|Americas|EMEA)\b',
         loc, re.I):
+        return ''
+    # A company's broad global policy does not override an advertised
+    # role location such as 'Remote EMEA' or 'Remote - United States'.
+    # India is handled above and always remains explicitly eligible.
+    if re.search(
+        r'\b(?:US|USA|United States|UK|United Kingdom|EU|EMEA|LATAM|APAC|'
+        r'Europe|Americas|North America|Canada|Australia|Germany|France|'
+        r'Spain|Portugal|Poland|Netherlands|Singapore|Japan)\b', loc, re.I
+    ):
         return ''
     if scope or assumed_global:
         return 'Global / Anywhere'
@@ -567,6 +580,7 @@ def run(root=ROOT, *, fetch=None, now=None, workers=6):
                                 f'Unexpected source error {type(exc).__name__}: {str(exc)[:180]}',
                                 sources[idx]['type'])
     fetched, recent_matches, undated = 0, [], 0
+    total_role_hits = total_location_hits = total_timestamp_hits = 0
     healthy = 0
     seen_next = dict(prev_seen)
     health_rows = []
@@ -585,7 +599,8 @@ def run(root=ROOT, *, fetch=None, now=None, workers=6):
             if not role_matches(job.title):
                 continue
             role_hits += 1
-            region = remote_region(job, assumed_global=src.get('global_remote_default', False))
+            region = remote_region(job, assumed_global=src.get('global_remote_default', False),
+                                   locations_are_advertising_only=src.get('locations_are_advertising_only', False))
             if not region:
                 continue
             location_hits += 1
@@ -598,6 +613,9 @@ def run(root=ROOT, *, fetch=None, now=None, workers=6):
                 continue
             qualifying += 1
             recent_matches.append((job, region, pub, key))
+        total_role_hits += role_hits
+        total_location_hits += location_hits
+        total_timestamp_hits += timestamp_hits
         health_rows.append([src['name'], status, adapter, len(jobs), qualifying, error, src['careers'],
                             role_hits, location_hits, timestamp_hits])
     # Prior seen IDs are never accidentally lost during a site outage.
@@ -619,7 +637,11 @@ def run(root=ROOT, *, fetch=None, now=None, workers=6):
               [job_row(j, region, pub) for j, region, pub in new])
     summary = {'companies_configured': len(sources), 'sources_readable': healthy,
                'sources_needing_adapter_or_failed': len(sources) - healthy,
-               'jobs_fetched': fetched, 'date_unverified_role_location_matches': undated,
+               'jobs_fetched': fetched,
+               'matching_role_titles': total_role_hits,
+               'matching_india_global_locations': total_location_hits,
+               'matching_with_usable_publication_time': total_timestamp_hits,
+               'date_unverified_role_location_matches': undated,
                'matching_postings_within_24h': len(recent_matches), 'new_matches': len(new),
                'first_run_baseline': first_run, 'scanned_utc': now.isoformat(),
                'statuses': {r[0]: r[1] for r in health_rows}}

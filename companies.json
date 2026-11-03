@@ -49,8 +49,11 @@
     },
     {
       "name": "Doist",
-      "type": "website",
-      "careers": "https://www.todoist.com/careers"
+      "type": "workable",
+      "careers": "https://apply.workable.com/doist/",
+      "slug": "doist",
+      "global_remote_default": true,
+      "locations_are_advertising_only": true
     },
     {
       "name": "DuckDuckGo",
@@ -81,8 +84,9 @@
     },
     {
       "name": "Kinsta",
-      "type": "website",
-      "careers": "https://kinsta.com/careers/"
+      "type": "lever",
+      "careers": "https://jobs.lever.co/kinsta",
+      "slug": "kinsta"
     },
     {
       "name": "Kit",
@@ -154,8 +158,9 @@
     },
     {
       "name": "Remote",
-      "type": "website",
-      "careers": "https://remote.com/careers"
+      "type": "greenhouse",
+      "careers": "https://job-boards.greenhouse.io/remotecom",
+      "slug": "remotecom"
     },
     {
       "name": "SafetyWing",
@@ -231,8 +236,9 @@
     },
     {
       "name": "Whereby",
-      "type": "website",
-      "careers": "https://whereby.com/careers/"
+      "type": "lever",
+      "careers": "https://jobs.lever.co/whereby",
+      "slug": "whereby"
     },
     {
       "name": "YNAB",
