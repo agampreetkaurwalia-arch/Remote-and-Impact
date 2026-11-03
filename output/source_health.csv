@@ -7,15 +7,15 @@ Buffer,EMPTY,company website,0,0,,https://buffer.com/journey,0,0,0
 Chili Piper,OK,ashby,3,0,,https://jobs.ashbyhq.com/chilipiper,0,0,0
 Constructor,OK,ashby,31,0,,https://jobs.ashbyhq.com/constructor,5,0,0
 Contra,OK,discovered ashby:contra,7,0,,https://contra.com/careers,2,0,0
-Doist,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.todoist.com/careers,0,0,0
+Doist,EMPTY,workable,0,0,,https://apply.workable.com/doist/,0,0,0
 DuckDuckGo,OK,ashby,10,0,,https://jobs.ashbyhq.com/duck-duck-go,1,0,0
 Float,EMPTY,company website,0,0,,https://www.float.com/careers,0,0,0
 Ghost,EMPTY,company website,0,0,,https://careers.ghost.org/,0,0,0
 GitLab,OK,greenhouse,235,0,,https://job-boards.greenhouse.io/gitlab,38,1,1
 Groove,ERROR,website,0,0,HTTPError: HTTP Error 404: Not Found,https://www.groovehq.com/careers,0,0,0
-Kinsta,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://kinsta.com/careers/,0,0,0
+Kinsta,OK,lever,2,0,,https://jobs.lever.co/kinsta,0,0,0
 Kit,OK,ashby,7,0,,https://jobs.ashbyhq.com/kit,0,0,0
-John Snow Labs,OK,smartrecruiters,5,0,,https://careers.smartrecruiters.com/JohnSnowLabs,1,1,1
+John Snow Labs,OK,smartrecruiters,5,0,,https://careers.smartrecruiters.com/JohnSnowLabs,1,0,0
 Liveblocks,ERROR,website,0,0,HTTPError: HTTP Error 404: Not Found,https://join.team/liveblocks,0,0,0
 Mailbird,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://careers.getmailbird.com/,0,0,0
 MailerLite,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.mailerlite.com/jobs,0,0,0
@@ -27,7 +27,7 @@ Panopto,OK,discovered lever:panopto,13,0,,https://www.panopto.com/company/career
 Pitch,OK,discovered workable:pitch-software,2,0,,https://pitch.com/jobs,0,0,0
 Plus,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://plusai.com/careers,0,0,0
 Podia,ERROR,website,0,0,HTTPError: HTTP Error 404: Not Found,https://www.podia.com/careers,0,0,0
-Remote,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://remote.com/careers,0,0,0
+Remote,EMPTY,greenhouse,0,0,,https://job-boards.greenhouse.io/remotecom,0,0,0
 SafetyWing,EMPTY,company website,0,0,,https://safetywing.pinpointhq.com/en,0,0,0
 ScaleMath,OK,discovered ashby:scalemath,4,0,,https://scalemath.com/careers/,0,0,0
 Scalerrs,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.scalerrs.co/careers,0,0,0
@@ -42,7 +42,7 @@ The Shelf,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board
 tl;dv,ERROR,website,0,0,HTTPError: HTTP Error 404: Not Found,https://tldv.io/careers/,0,0,0
 Toggl,ERROR,ashby,0,0,HTTPError: HTTP Error 404: Not Found,https://jobs.ashbyhq.com/toggl,0,0,0
 Tortuga,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.tortugabackpacks.com/pages/jobs,0,0,0
-Whereby,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://whereby.com/careers/,0,0,0
+Whereby,EMPTY,lever,0,0,,https://jobs.lever.co/whereby,0,0,0
 YNAB,EMPTY,company website,0,0,,https://ynab.pinpointhq.com/,0,0,0
 Zapier,OK,ashby,11,0,,https://jobs.ashbyhq.com/zapier,2,0,0
 Zyte,OK,workable,18,0,,https://apply.workable.com/zyte/,2,0,0
