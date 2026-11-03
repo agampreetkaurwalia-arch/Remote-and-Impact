@@ -2,56 +2,277 @@
   "timezone": "Asia/Kolkata",
   "window_hours": 24,
   "companies": [
-    {"name":"Appcues","type":"lever","slug":"appcues-2","careers":"https://jobs.lever.co/appcues-2"},
-    {"name":"Arkency","type":"website","careers":"https://arkency.com/careers"},
-    {"name":"Automattic","type":"website","careers":"https://automattic.com/work-with-us/jobs/"},
-    {"name":"Awesome Motive","type":"website","careers":"https://awesomemotive.com/careers/"},
-    {"name":"Buffer","type":"website","careers":"https://buffer.com/journey"},
-    {"name":"Chili Piper","type":"ashby","slug":"chilipiper","careers":"https://jobs.ashbyhq.com/chilipiper"},
-    {"name":"Constructor","type":"ashby","slug":"constructor","careers":"https://jobs.ashbyhq.com/constructor"},
-    {"name":"Contra","type":"website","careers":"https://contra.com/careers"},
-    {"name":"Doist","type":"website","careers":"https://doist.com/careers"},
-    {"name":"DuckDuckGo","type":"ashby","slug":"duck-duck-go","careers":"https://jobs.ashbyhq.com/duck-duck-go"},
-    {"name":"Float","type":"website","careers":"https://www.float.com/careers"},
-    {"name":"Ghost","type":"website","careers":"https://careers.ghost.org/"},
-    {"name":"GitLab","type":"greenhouse","slug":"gitlab","careers":"https://job-boards.greenhouse.io/gitlab"},
-    {"name":"Groove","type":"website","careers":"https://www.groovehq.com/careers"},
-    {"name":"Kinsta","type":"website","careers":"https://kinsta.com/careers/"},
-    {"name":"Kit","type":"website","careers":"https://kit.com/careers"},
-    {"name":"John Snow Labs","type":"website","careers":"https://www.johnsnowlabs.com/careers/"},
-    {"name":"Liveblocks","type":"website","careers":"https://join.team/liveblocks"},
-    {"name":"Mailbird","type":"website","careers":"https://careers.getmailbird.com/"},
-    {"name":"MailerLite","type":"website","careers":"https://www.mailerlite.com/jobs"},
-    {"name":"MeetEdgar","type":"website","careers":"https://meetedgar.com/careers/"},
-    {"name":"Modash","type":"website","careers":"https://www.modash.io/careers"},
-    {"name":"Namecheap","type":"website","careers":"https://www.namecheap.com/careers/"},
-    {"name":"Omniscient Digital","type":"website","careers":"https://beomniscient.com/careers/"},
-    {"name":"Panopto","type":"website","careers":"https://www.panopto.com/company/careers/"},
-    {"name":"Pitch","type":"website","careers":"https://pitch.com/careers"},
-    {"name":"Plus","type":"website","careers":"https://plusai.com/careers"},
-    {"name":"Podia","type":"website","careers":"https://www.podia.com/careers"},
-    {"name":"Remote","type":"website","careers":"https://remote.com/careers"},
-    {"name":"SafetyWing","type":"website","careers":"https://safetywing.pinpointhq.com/en"},
-    {"name":"ScaleMath","type":"website","careers":"https://scalemath.com/careers/"},
-    {"name":"Scalerrs","type":"website","careers":"https://www.scalerrs.co/careers"},
-    {"name":"Shogun","type":"website","careers":"https://getshogun.com/careers"},
-    {"name":"SimpleTexting","type":"website","careers":"https://simpletexting.com/careers/"},
-    {"name":"Smile","type":"website","careers":"https://smile.io/careers"},
-    {"name":"Sporty Group","type":"greenhouse","slug":"sportygroup","careers":"https://job-boards.greenhouse.io/sportygroup"},
-    {"name":"Springworks","type":"website","careers":"https://springworks.goodfit.so/"},
-    {"name":"Storylane","type":"website","careers":"https://www.storylane.io/careers"},
-    {"name":"TestGorilla","type":"website","careers":"https://www.testgorilla.com/careers/"},
-    {"name":"The Shelf","type":"website","careers":"https://www.theshelf.com/careers"},
-    {"name":"tl;dv","type":"website","careers":"https://tldv.io/careers/"},
-    {"name":"Toggl","type":"ashby","slug":"toggl","careers":"https://jobs.ashbyhq.com/toggl"},
-    {"name":"Tortuga","type":"website","careers":"https://www.tortugabackpacks.com/pages/jobs"},
-    {"name":"Whereby","type":"website","careers":"https://whereby.com/careers/"},
-    {"name":"YNAB","type":"website","careers":"https://www.ynab.com/careers"},
-    {"name":"Zapier","type":"ashby","slug":"zapier","careers":"https://jobs.ashbyhq.com/zapier"},
-    {"name":"Zyte","type":"website","careers":"https://www.zyte.com/jobs/"},
-    {"name":"Fingerprint","type":"website","careers":"https://fingerprint.com/careers/jobs/"},
-    {"name":"Strike","type":"greenhouse","slug":"strike","careers":"https://job-boards.greenhouse.io/strike"},
-    {"name":"Brave","type":"greenhouse","slug":"brave","careers":"https://job-boards.greenhouse.io/brave"},
-    {"name":"Alpaca","type":"greenhouse","slug":"alpaca","careers":"https://job-boards.greenhouse.io/alpaca"}
+    {
+      "name": "Appcues",
+      "type": "lever",
+      "slug": "appcues-2",
+      "careers": "https://jobs.lever.co/appcues-2"
+    },
+    {
+      "name": "Arkency",
+      "type": "website",
+      "careers": "https://arkency.com/careers"
+    },
+    {
+      "name": "Automattic",
+      "type": "greenhouse",
+      "careers": "https://job-boards.greenhouse.io/automatticcareers",
+      "slug": "automatticcareers",
+      "global_remote_default": true
+    },
+    {
+      "name": "Awesome Motive",
+      "type": "website",
+      "careers": "https://awesomemotive.com/careers/"
+    },
+    {
+      "name": "Buffer",
+      "type": "website",
+      "careers": "https://buffer.com/journey"
+    },
+    {
+      "name": "Chili Piper",
+      "type": "ashby",
+      "slug": "chilipiper",
+      "careers": "https://jobs.ashbyhq.com/chilipiper"
+    },
+    {
+      "name": "Constructor",
+      "type": "ashby",
+      "slug": "constructor",
+      "careers": "https://jobs.ashbyhq.com/constructor"
+    },
+    {
+      "name": "Contra",
+      "type": "website",
+      "careers": "https://contra.com/careers"
+    },
+    {
+      "name": "Doist",
+      "type": "website",
+      "careers": "https://www.todoist.com/careers"
+    },
+    {
+      "name": "DuckDuckGo",
+      "type": "ashby",
+      "slug": "duck-duck-go",
+      "careers": "https://jobs.ashbyhq.com/duck-duck-go"
+    },
+    {
+      "name": "Float",
+      "type": "website",
+      "careers": "https://www.float.com/careers"
+    },
+    {
+      "name": "Ghost",
+      "type": "website",
+      "careers": "https://careers.ghost.org/"
+    },
+    {
+      "name": "GitLab",
+      "type": "greenhouse",
+      "slug": "gitlab",
+      "careers": "https://job-boards.greenhouse.io/gitlab"
+    },
+    {
+      "name": "Groove",
+      "type": "website",
+      "careers": "https://www.groovehq.com/careers"
+    },
+    {
+      "name": "Kinsta",
+      "type": "website",
+      "careers": "https://kinsta.com/careers/"
+    },
+    {
+      "name": "Kit",
+      "type": "ashby",
+      "careers": "https://jobs.ashbyhq.com/kit",
+      "slug": "kit"
+    },
+    {
+      "name": "John Snow Labs",
+      "type": "smartrecruiters",
+      "careers": "https://careers.smartrecruiters.com/JohnSnowLabs",
+      "slug": "JohnSnowLabs",
+      "global_remote_default": true
+    },
+    {
+      "name": "Liveblocks",
+      "type": "website",
+      "careers": "https://join.team/liveblocks"
+    },
+    {
+      "name": "Mailbird",
+      "type": "website",
+      "careers": "https://careers.getmailbird.com/"
+    },
+    {
+      "name": "MailerLite",
+      "type": "website",
+      "careers": "https://www.mailerlite.com/jobs"
+    },
+    {
+      "name": "MeetEdgar",
+      "type": "website",
+      "careers": "https://meetedgar.com/careers/"
+    },
+    {
+      "name": "Modash",
+      "type": "website",
+      "careers": "https://www.modash.io/careers"
+    },
+    {
+      "name": "Namecheap",
+      "type": "website",
+      "careers": "https://www.namecheap.com/careers/"
+    },
+    {
+      "name": "Omniscient Digital",
+      "type": "website",
+      "careers": "https://beomniscient.com/careers/"
+    },
+    {
+      "name": "Panopto",
+      "type": "website",
+      "careers": "https://www.panopto.com/company/careers/"
+    },
+    {
+      "name": "Pitch",
+      "type": "website",
+      "careers": "https://pitch.com/jobs"
+    },
+    {
+      "name": "Plus",
+      "type": "website",
+      "careers": "https://plusai.com/careers"
+    },
+    {
+      "name": "Podia",
+      "type": "website",
+      "careers": "https://www.podia.com/careers"
+    },
+    {
+      "name": "Remote",
+      "type": "website",
+      "careers": "https://remote.com/careers"
+    },
+    {
+      "name": "SafetyWing",
+      "type": "website",
+      "careers": "https://safetywing.pinpointhq.com/en"
+    },
+    {
+      "name": "ScaleMath",
+      "type": "website",
+      "careers": "https://scalemath.com/careers/"
+    },
+    {
+      "name": "Scalerrs",
+      "type": "website",
+      "careers": "https://www.scalerrs.co/careers"
+    },
+    {
+      "name": "Shogun",
+      "type": "website",
+      "careers": "https://getshogun.com/careers"
+    },
+    {
+      "name": "SimpleTexting",
+      "type": "website",
+      "careers": "https://simpletexting.com/careers/"
+    },
+    {
+      "name": "Smile",
+      "type": "website",
+      "careers": "https://smile.io/careers"
+    },
+    {
+      "name": "Sporty Group",
+      "type": "greenhouse",
+      "slug": "sportygroup",
+      "careers": "https://job-boards.greenhouse.io/sportygroup"
+    },
+    {
+      "name": "Springworks",
+      "type": "website",
+      "careers": "https://springworks.goodfit.so/"
+    },
+    {
+      "name": "Storylane",
+      "type": "website",
+      "careers": "https://www.storylane.io/careers"
+    },
+    {
+      "name": "TestGorilla",
+      "type": "website",
+      "careers": "https://www.testgorilla.com/careers/"
+    },
+    {
+      "name": "The Shelf",
+      "type": "website",
+      "careers": "https://www.theshelf.com/careers"
+    },
+    {
+      "name": "tl;dv",
+      "type": "website",
+      "careers": "https://tldv.io/careers/"
+    },
+    {
+      "name": "Toggl",
+      "type": "ashby",
+      "slug": "toggl",
+      "careers": "https://jobs.ashbyhq.com/toggl"
+    },
+    {
+      "name": "Tortuga",
+      "type": "website",
+      "careers": "https://www.tortugabackpacks.com/pages/jobs"
+    },
+    {
+      "name": "Whereby",
+      "type": "website",
+      "careers": "https://whereby.com/careers/"
+    },
+    {
+      "name": "YNAB",
+      "type": "website",
+      "careers": "https://ynab.pinpointhq.com/"
+    },
+    {
+      "name": "Zapier",
+      "type": "ashby",
+      "slug": "zapier",
+      "careers": "https://jobs.ashbyhq.com/zapier"
+    },
+    {
+      "name": "Zyte",
+      "type": "workable",
+      "careers": "https://apply.workable.com/zyte/",
+      "slug": "zyte"
+    },
+    {
+      "name": "Fingerprint",
+      "type": "website",
+      "careers": "https://fingerprint.com/careers/jobs/"
+    },
+    {
+      "name": "Strike",
+      "type": "greenhouse",
+      "slug": "strike",
+      "careers": "https://job-boards.greenhouse.io/strike"
+    },
+    {
+      "name": "Brave",
+      "type": "greenhouse",
+      "slug": "brave",
+      "careers": "https://job-boards.greenhouse.io/brave"
+    },
+    {
+      "name": "Alpaca",
+      "type": "greenhouse",
+      "slug": "alpaca",
+      "careers": "https://job-boards.greenhouse.io/alpaca"
+    }
   ]
 }

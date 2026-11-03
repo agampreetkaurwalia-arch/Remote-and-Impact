@@ -31,7 +31,7 @@ ROLE_RX = re.compile(
     r"founder['’]?s?\s+associate|chief\s+of\s+staff|"
     r"(?:technical\s+)?program(?:me)?\s+manager|"
     r"(?:technical\s+)?project\s+manager|"
-    r"(?:technical\s+)?product\s+manager|"
+    r"(?:technical\s+)?product(?:\s+(?:growth|strategy|operations))?\s+manager|"
     r"strategy\s*(?:&|and|/)\s*operations|bizops)\b", re.I)
 GLOBAL_RX = re.compile(r"\b(?:global(?:ly)?|world\s*-?\s*wide|anywhere|work\s+from\s+anywhere|any\s+location)\b", re.I)
 INDIA_RX = re.compile(r"\bindia\b", re.I)
@@ -47,6 +47,7 @@ ATS_RX = [
     ('lever', re.compile(r'https?://jobs\.lever\.co/([a-zA-Z0-9._-]+)', re.I)),
     ('greenhouse', re.compile(r'https?://(?:job-boards|boards)\.greenhouse\.io/([a-zA-Z0-9._-]+)', re.I)),
     ('workable', re.compile(r'https?://apply\.workable\.com/([a-zA-Z0-9._-]+)', re.I)),
+    ('smartrecruiters', re.compile(r'https?://careers\.smartrecruiters\.com/([a-zA-Z0-9._-]+)', re.I)),
 ]
 
 @dataclass(frozen=True)
@@ -120,11 +121,24 @@ def parse_timestamp(value):
         return None
 
 
-def remote_region(job):
-    """Returns only the three scopes requested; avoids company-policy inference."""
+# A title's explicit region can override a job board's generic "Remote" label.
+# For example "Project Manager - US" must not become worldwide through a
+# company's generally global remote policy.
+TITLE_REGION_RESTRICTED = re.compile(
+    r'(?:^|\s|[—–,(])(?:[-—–]\s*)?(?:US|USA|UK|EU|EMEA|Americas|LATAM|'
+    r'North America|Europe|Canada|Australia)(?:\s+only)?\s*(?:$|[),—–])', re.I)
+
+
+def remote_region(job, *, assumed_global=False):
+    """Return India/Global only on job evidence or explicitly audited company policy.
+
+    assumed_global is an opt-in per company, never a general rule for all
+    remote-first employers. Explicit role restrictions always take precedence.
+    """
     loc = ' '.join(str(job.location).split())
+    title = ' '.join(str(job.title).split())
     scope = GLOBAL_RX.search(loc)
-    india = INDIA_RX.search(loc)
+    india = INDIA_RX.search(loc) or re.search(r'(?:[-–—,(]\s*)India\s*(?:$|[),–—])', title, re.I)
     workplace = str(job.workplace).strip().lower().replace('-', '')
     if workplace in ('hybrid', 'onsite', 'on site'):
         return ''
@@ -132,14 +146,15 @@ def remote_region(job):
               or re.search(r'\b(?:anywhere|world\s*-?\s*wide)\b', loc, re.I))
     if not remote:
         return ''
-    # If India is explicitly allowed, other named locations don't disqualify it.
     if india:
         return 'India'
+    if TITLE_REGION_RESTRICTED.search(title):
+        return ''
     if RESTRICTED_RX.search(loc) or re.search(
         r'\banywhere\s+(?:in|within|across)\s+(?:the\s+)?(?:US|USA|United States|UK|EU|Europe|Canada|Australia|Americas|EMEA)\b',
         loc, re.I):
         return ''
-    if scope:
+    if scope or assumed_global:
         return 'Global / Anywhere'
     return ''
 
@@ -212,6 +227,37 @@ def parse_workable(company, payload):
                   str(item.get('published_on') or item.get('published_at') or item.get('created_at') or ''),
                   'workable_published_if_available',
                   str(item.get('url') or item.get('application_url') or ''))
+
+
+def parse_smartrecruiters(company, payload):
+    """Read the public SmartRecruiters company-postings listing.
+
+    Its releasedDate is a listing release timestamp. Missing or date-only
+    values remain unverified under the strict 24-hour rule.
+    """
+    jobs = payload.get('content')
+    if not isinstance(jobs, list):
+        raise ValueError('SmartRecruiters payload lacks content list')
+    for item in jobs:
+        if not isinstance(item, dict):
+            continue
+        loc_obj = item.get('location') or {}
+        if not isinstance(loc_obj, dict):
+            loc_obj = {}
+        city = str(loc_obj.get('city') or '').strip()
+        country = str(loc_obj.get('country') or loc_obj.get('countryCode') or '').strip()
+        country = 'India' if country.lower() in ('in', 'ind') else country
+        loc = ', '.join(p for p in (city, country) if p)
+        if bool(loc_obj.get('remote')):
+            loc = ('Remote ' + loc).strip()
+        ident = str(item.get('id') or '')
+        url = str(item.get('applyUrl') or item.get('jobUrl') or '')
+        if not url and ident:
+            url = 'https://jobs.smartrecruiters.com/' + quote(company.replace(' ', ''), safe='') + '/' + quote(ident, safe='')
+        yield Job(company, ident, str(item.get('name') or item.get('title') or ''),
+                  loc, 'Remote' if loc_obj.get('remote') else '',
+                  str(item.get('releasedDate') or item.get('releaseDate') or ''),
+                  'smartrecruiters_releasedDate', url)
 
 
 class StructuredPage(HTMLParser):
@@ -353,17 +399,20 @@ def endpoint(kind, slug):
         return f'https://api.lever.co/v0/postings/{s}?mode=json'
     if kind == 'workable':
         return f'https://apply.workable.com/api/v1/widget/accounts/{s}?details=true'
+    if kind == 'smartrecruiters':
+        return f'https://api.smartrecruiters.com/v1/companies/{s}/postings?limit=100'
     raise ValueError(f'Unknown ATS: {kind}')
 
 PARSERS = {'greenhouse': parse_greenhouse, 'ashby': parse_ashby,
-           'lever': parse_lever, 'workable': parse_workable}
+           'lever': parse_lever, 'workable': parse_workable,
+           'smartrecruiters': parse_smartrecruiters}
 
 
-def enrich_greenhouse(company, slug, jobs, fetch=None):
+def enrich_greenhouse(company, slug, jobs, fetch=None, assumed_global=False):
     """Greenhouse listing may omit first_published. Read the job detail only
     for target-role remote vacancies; never mistake updated_at for publish date.
     """
-    missing = [j for j in jobs if role_matches(j.title) and remote_region(j)
+    missing = [j for j in jobs if role_matches(j.title) and remote_region(j, assumed_global=assumed_global)
                and not j.timestamp and j.ident]
     selected = missing[:40]
     replacements = {}
@@ -395,7 +444,8 @@ def fetch_company(source, *, fetch=None):
             jobs = list(PARSERS[kind](name, json.loads(raw)))
             warning = ''
             if kind == 'greenhouse':
-                jobs, warning = enrich_greenhouse(name, source['slug'], jobs, fetch=fetch)
+                jobs, warning = enrich_greenhouse(name, source['slug'], jobs, fetch=fetch,
+                                                  assumed_global=source.get('global_remote_default', False))
             return jobs, 'DEGRADED' if warning else ('OK' if jobs else 'EMPTY'), warning, kind
         if kind != 'website':
             raise ValueError('Unrecognized company source type')
@@ -431,7 +481,7 @@ def fetch_company(source, *, fetch=None):
             if len(details) == 16:
                 warning += ('; ' if warning else '') + 'website detail-link cap reached (16)'
             return list(distinct.values()), 'DEGRADED' if warning else 'OK', warning, 'job-page JSON-LD'
-        if re.search(r'no (?:current |open )?(?:job |position |role )?(?:openings|positions|vacancies)|no jobs available', page, re.I):
+        if re.search(r'no (?:current |open )?(?:job |position |role )?(?:openings|positions|vacancies)|no jobs available|no open roles|there are currently no positions advertised', page, re.I):
             return [], 'EMPTY', '', 'company website'
         return [], 'NEEDS_ADAPTER', ('No readable structured listings or ATS board. ' + ' '.join(errors)).strip(), 'website'
     except (ValueError, KeyError, TypeError, HTTPError, URLError, TimeoutError, OSError) as exc:
@@ -522,6 +572,7 @@ def run(root=ROOT, *, fetch=None, now=None, workers=6):
     health_rows = []
     for src, result in zip(sources, results):
         jobs, status, error, adapter = result
+        role_hits = location_hits = timestamp_hits = 0
         fetched += len(jobs)
         if status in ('OK', 'EMPTY'):
             healthy += 1
@@ -533,23 +584,31 @@ def run(root=ROOT, *, fetch=None, now=None, workers=6):
             seen_next[key] = now.isoformat()
             if not role_matches(job.title):
                 continue
-            region = remote_region(job)
+            role_hits += 1
+            region = remote_region(job, assumed_global=src.get('global_remote_default', False))
             if not region:
                 continue
+            location_hits += 1
             pub = parse_timestamp(job.timestamp)
             if pub is None:
                 undated += 1
                 continue
+            timestamp_hits += 1
             if not recent(pub, now, config.get('window_hours', 24)):
                 continue
             qualifying += 1
             recent_matches.append((job, region, pub, key))
-        health_rows.append([src['name'], status, adapter, len(jobs), qualifying, error, src['careers']])
+        health_rows.append([src['name'], status, adapter, len(jobs), qualifying, error, src['careers'],
+                            role_hits, location_hits, timestamp_hits])
     # Prior seen IDs are never accidentally lost during a site outage.
     new = [(job, region, pub) for job, region, pub, key in recent_matches if not first_run and key not in prev_seen]
     new.sort(key=lambda x: x[2], reverse=True)
     recent_matches.sort(key=lambda x: x[2], reverse=True)
-    write_csv(out / 'source_health.csv', ['Company', 'Status', 'Adapter', 'Jobs found', '24h matching jobs', 'Error / limitation', 'Careers'], health_rows)
+    write_csv(out / 'source_health.csv',
+              ['Company', 'Status', 'Adapter', 'Jobs found', '24h matching jobs',
+               'Error / limitation', 'Careers', 'Matching role titles',
+               'Matching India/global location', 'Matching with usable timestamp'],
+              health_rows)
     # Four columns in every job report. Application URL is included inside Role.
     def job_row(j, region, pub):
         hrs = max(0, (now - pub).total_seconds() / 3600)
