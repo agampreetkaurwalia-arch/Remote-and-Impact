@@ -1,0 +1,22 @@
+Company,Status,Error / limitation,Careers
+Arkency,ERROR,careers: HTTPError: HTTP Error 404: Not Found,https://arkency.com/careers
+Buffer,NEEDS_ADAPTER,No readable job listings. ,https://buffer.com/journey
+Float,NEEDS_ADAPTER,No readable job listings. ,https://www.float.com/careers
+Ghost,NEEDS_ADAPTER,No readable job listings. ,https://careers.ghost.org/
+Groove,ERROR,careers: HTTPError: HTTP Error 404: Not Found,https://www.groovehq.com/careers
+Liveblocks,ERROR,careers: HTTPError: HTTP Error 404: Not Found,https://join.team/liveblocks
+Mailbird,NEEDS_ADAPTER,No readable job listings. ,https://careers.getmailbird.com/
+MailerLite,NEEDS_ADAPTER,No readable job listings. ,https://www.mailerlite.com/jobs
+MeetEdgar,NEEDS_ADAPTER,No readable job listings. ,https://meetedgar.com/careers/
+Modash,NEEDS_ADAPTER,"1 job detail links visible, but no usable postings/dates. ",https://www.modash.io/careers
+Namecheap,ERROR,careers: HTTPError: HTTP Error 403: Forbidden,https://www.namecheap.com/careers/
+Plus,NEEDS_ADAPTER,No readable job listings. ,https://plusai.com/careers
+Podia,ERROR,careers: HTTPError: HTTP Error 404: Not Found,https://www.podia.com/careers
+Scalerrs,NEEDS_ADAPTER,"2 job detail links visible, but no usable postings/dates. ",https://www.scalerrs.co/careers
+Shogun,NEEDS_ADAPTER,No readable job listings. ,https://getshogun.com/careers
+SimpleTexting,NEEDS_ADAPTER,No readable job listings. ,https://simpletexting.com/careers/
+Storylane,NEEDS_ADAPTER,No readable job listings. ,https://www.storylane.io/careers
+The Shelf,NEEDS_ADAPTER,"2 job detail links visible, but no usable postings/dates. ",https://www.theshelf.com/careers
+tl;dv,ERROR,careers: HTTPError: HTTP Error 404: Not Found,https://tldv.io/careers/
+Toggl,NEEDS_ADAPTER,No readable job listings. ashby: HTTPError: HTTP Error 404: Not Found,https://jobs.ashbyhq.com/toggl
+Tortuga,NEEDS_ADAPTER,No readable job listings. ,https://www.tortugabackpacks.com/pages/jobs
