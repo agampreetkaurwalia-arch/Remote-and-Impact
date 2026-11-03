@@ -1,0 +1,52 @@
+Company,Status,Adapter,Jobs found,24h matching jobs,Error / limitation,Careers
+Appcues,EMPTY,lever,0,0,,https://jobs.lever.co/appcues-2
+Arkency,ERROR,website,0,0,HTTPError: HTTP Error 404: Not Found,https://arkency.com/careers
+Automattic,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://automattic.com/work-with-us/jobs/
+Awesome Motive,OK,discovered workable:awesomemotive,5,0,,https://awesomemotive.com/careers/
+Buffer,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://buffer.com/journey
+Chili Piper,OK,ashby,3,0,,https://jobs.ashbyhq.com/chilipiper
+Constructor,OK,ashby,31,0,,https://jobs.ashbyhq.com/constructor
+Contra,OK,discovered ashby:contra,7,0,,https://contra.com/careers
+Doist,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://doist.com/careers
+DuckDuckGo,OK,ashby,10,0,,https://jobs.ashbyhq.com/duck-duck-go
+Float,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.float.com/careers
+Ghost,EMPTY,company website,0,0,,https://careers.ghost.org/
+GitLab,OK,greenhouse,235,0,,https://job-boards.greenhouse.io/gitlab
+Groove,ERROR,website,0,0,HTTPError: HTTP Error 404: Not Found,https://www.groovehq.com/careers
+Kinsta,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://kinsta.com/careers/
+Kit,ERROR,website,0,0,HTTPError: HTTP Error 403: Forbidden,https://kit.com/careers
+John Snow Labs,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.johnsnowlabs.com/careers/
+Liveblocks,ERROR,website,0,0,HTTPError: HTTP Error 404: Not Found,https://join.team/liveblocks
+Mailbird,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://careers.getmailbird.com/
+MailerLite,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.mailerlite.com/jobs
+MeetEdgar,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://meetedgar.com/careers/
+Modash,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.modash.io/careers
+Namecheap,ERROR,website,0,0,HTTPError: HTTP Error 403: Forbidden,https://www.namecheap.com/careers/
+Omniscient Digital,OK,discovered ashby:omniscient,15,0,,https://beomniscient.com/careers/
+Panopto,OK,discovered lever:panopto,13,0,,https://www.panopto.com/company/careers/
+Pitch,ERROR,website,0,0,HTTPError: HTTP Error 404: Not Found,https://pitch.com/careers
+Plus,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://plusai.com/careers
+Podia,ERROR,website,0,0,HTTPError: HTTP Error 404: Not Found,https://www.podia.com/careers
+Remote,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://remote.com/careers
+SafetyWing,EMPTY,company website,0,0,,https://safetywing.pinpointhq.com/en
+ScaleMath,OK,discovered ashby:scalemath,4,0,,https://scalemath.com/careers/
+Scalerrs,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.scalerrs.co/careers
+Shogun,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://getshogun.com/careers
+SimpleTexting,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://simpletexting.com/careers/
+Smile,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board. lever:smile.io HTTPError,https://smile.io/careers
+Sporty Group,OK,greenhouse,34,0,,https://job-boards.greenhouse.io/sportygroup
+Springworks,OK,job-page JSON-LD,1,0,,https://springworks.goodfit.so/
+Storylane,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.storylane.io/careers
+TestGorilla,OK,discovered ashby:testgorilla,2,0,,https://www.testgorilla.com/careers/
+The Shelf,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.theshelf.com/careers
+tl;dv,ERROR,website,0,0,HTTPError: HTTP Error 404: Not Found,https://tldv.io/careers/
+Toggl,ERROR,ashby,0,0,HTTPError: HTTP Error 404: Not Found,https://jobs.ashbyhq.com/toggl
+Tortuga,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.tortugabackpacks.com/pages/jobs
+Whereby,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://whereby.com/careers/
+YNAB,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://www.ynab.com/careers
+Zapier,OK,ashby,11,0,,https://jobs.ashbyhq.com/zapier
+Zyte,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board. workable:j HTTPError,https://www.zyte.com/jobs/
+Fingerprint,NEEDS_ADAPTER,website,0,0,No readable structured listings or ATS board.,https://fingerprint.com/careers/jobs/
+Strike,OK,greenhouse,5,0,,https://job-boards.greenhouse.io/strike
+Brave,OK,greenhouse,10,0,,https://job-boards.greenhouse.io/brave
+Alpaca,OK,greenhouse,72,0,,https://job-boards.greenhouse.io/alpaca
