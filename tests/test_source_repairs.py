@@ -87,7 +87,7 @@ class SourceRepairTests(unittest.TestCase):
                     return json.dumps({'jobs':[]})
                 return '<h2>No open roles</h2>'
             summary=r.run(root,fetch=fake,now=NOW,workers=3)
-            self.assertTrue(summary['first_run_baseline'])
+            self.assertTrue(summary['first_run'])
             import csv
             with (root/'output/source_health.csv').open() as f:
                 health=list(csv.DictReader(f))
@@ -97,7 +97,7 @@ class SourceRepairTests(unittest.TestCase):
             self.assertIn('Matching India/global location',health[0])
             email=(root/'output/email.md').read_text()
             self.assertIn('| Company | Role | Posted within 24 hours | Work location |',email)
-            self.assertEqual(0,summary['new_matches'])
+            self.assertGreater(summary['new_matches'],0)
 
 if __name__ == '__main__':
     unittest.main()

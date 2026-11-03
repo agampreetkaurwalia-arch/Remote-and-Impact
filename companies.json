@@ -164,8 +164,10 @@
     },
     {
       "name": "SafetyWing",
-      "type": "website",
-      "careers": "https://safetywing.pinpointhq.com/en"
+      "type": "pinpoint",
+      "careers": "https://safetywing.pinpointhq.com/en",
+      "slug": "safetywing",
+      "global_remote_default": true
     },
     {
       "name": "ScaleMath",
@@ -242,8 +244,10 @@
     },
     {
       "name": "YNAB",
-      "type": "website",
-      "careers": "https://ynab.pinpointhq.com/"
+      "type": "pinpoint",
+      "careers": "https://ynab.pinpointhq.com/",
+      "slug": "ynab",
+      "global_remote_default": true
     },
     {
       "name": "Zapier",
@@ -259,8 +263,9 @@
     },
     {
       "name": "Fingerprint",
-      "type": "website",
-      "careers": "https://fingerprint.com/careers/jobs/"
+      "type": "greenhouse",
+      "careers": "https://job-boards.greenhouse.io/fingerprint",
+      "slug": "fingerprint"
     },
     {
       "name": "Strike",

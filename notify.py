@@ -4,6 +4,8 @@ The user's existing GitHub email notifications deliver these Issues as email.
 No issue is created by unit tests; the workflow calls this only after live scan.
 """
 import json
+import csv
+import hashlib
 import os
 from pathlib import Path
 import subprocess
@@ -27,6 +29,15 @@ def notify(root=ROOT, *, env=None, invoke=None):
     invoke = invoke or subprocess.run
     summary = json.loads((root / 'output' / 'summary.json').read_text(encoding='utf-8'))
     title = issue_title(summary['scanned_utc'])
+    if summary.get('new_matches', 0) > 0:
+        # A manual rerun may discover genuinely new postings after the empty
+        # morning issue has already been sent. Give distinct sets of new jobs
+        # distinct issue titles, but keep retries of the same set idempotent.
+        with (root / 'output' / 'new_jobs.csv').open(encoding='utf-8', newline='') as f:
+            rows = list(csv.DictReader(f))
+        ids = sorted((row['Company'], row['Role'], row['Work location']) for row in rows)
+        fingerprint = hashlib.sha256(json.dumps(ids, sort_keys=True).encode()).hexdigest()[:10]
+        title += ' | jobs-' + fingerprint
     repo = env['GITHUB_REPOSITORY']
     args = ['gh', 'issue', 'list', '--repo', repo, '--state', 'all', '--limit', '100', '--json', 'title']
     listing = invoke(args, capture_output=True, text=True, env=env, check=True)

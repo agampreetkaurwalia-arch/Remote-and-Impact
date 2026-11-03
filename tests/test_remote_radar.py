@@ -259,32 +259,33 @@ class Integration(unittest.TestCase):
     def tearDown(self):
         self.tmp.cleanup()
 
-    def test_first_run_is_baseline_then_new_job_only_once(self):
+    def test_first_run_includes_verified_recent_jobs_then_only_new_ids(self):
         first = r.run(self.root, fetch=make_fetch(), now=NOW, workers=8)
         self.assertEqual(51, first['companies_configured'])
-        self.assertEqual(0, first['new_matches'])
-        self.assertTrue(first['first_run_baseline'])
+        self.assertGreater(first['new_matches'], 0)
+        self.assertTrue(first['first_run'])
+        self.assertFalse(first['first_run_baseline'])
         self.assertGreater(first['matching_postings_within_24h'],0)
-        (self.root/'state'/'seen.json').write_bytes((self.root/'output'/'next_state.json').read_bytes())
+        (self.root/'state'/'alerts_v2.json').write_bytes((self.root/'output'/'next_alerts_v2.json').read_bytes())
         second = r.run(self.root, fetch=make_fetch(True), now=NOW, workers=8)
         self.assertEqual(1, second['new_matches'])
         self.assertIn('Chief of Staff', (self.root/'output'/'email.md').read_text())
-        (self.root/'state'/'seen.json').write_bytes((self.root/'output'/'next_state.json').read_bytes())
+        (self.root/'state'/'alerts_v2.json').write_bytes((self.root/'output'/'next_alerts_v2.json').read_bytes())
         third = r.run(self.root, fetch=make_fetch(True), now=NOW, workers=8)
         self.assertEqual(0, third['new_matches'])
 
     def test_unexpected_source_crash_is_isolated(self):
         with unittest.mock.patch.object(r, 'fetch_company', side_effect=RuntimeError('broken parser')):
-            summary = r.run(self.root, now=NOW)
-        self.assertEqual(51, summary['sources_needing_adapter_or_failed'])
-        self.assertEqual(0, summary['new_matches'])
+            with self.assertRaisesRegex(RuntimeError, 'All 51 sources failed'):
+                r.run(self.root, now=NOW)
+        self.assertFalse((self.root/'output'/'next_alerts_v2.json').exists())
 
     def test_existing_saved_state_not_erased_if_sources_fail(self):
         (self.root/'state'/'seen.json').write_text(json.dumps({'version':1, 'seen':{'old::job':'2026-10-31T00:00:00Z'}}))
-        summary = r.run(self.root, fetch=lambda url: (_ for _ in ()).throw(ValueError('bad')),now=NOW)
-        self.assertEqual(51, summary['sources_needing_adapter_or_failed'])
-        nxt = json.loads((self.root/'output'/'next_state.json').read_text())
-        self.assertIn('old::job', nxt['seen'])
+        with self.assertRaisesRegex(RuntimeError, 'All 51 sources failed'):
+            r.run(self.root, fetch=lambda url: (_ for _ in ()).throw(ValueError('bad')),now=NOW)
+        self.assertTrue((self.root/'state'/'seen.json').exists())
+        self.assertFalse((self.root/'output'/'next_alerts_v2.json').exists())
 
     def test_early_older_posting_excluded(self):
         stale = (NOW-timedelta(hours=30)).isoformat()

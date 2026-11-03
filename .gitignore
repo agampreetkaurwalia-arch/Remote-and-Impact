@@ -3,3 +3,6 @@ __pycache__/
 output/next_state.json
 output/*.tmp
 state/*.tmp
+
+output/previous_summary.json
+output/next_alerts_v2.json

@@ -29,6 +29,11 @@ jobs:
           python-version: '3.12'
       - name: Offline preflight tests
         run: python -m unittest discover -s tests -v
+      - name: Remove stale output markers before the live scan
+        shell: bash
+        run: |
+          if [ -f output/summary.json ]; then cp output/summary.json output/previous_summary.json; fi
+          rm -f output/summary.json output/next_alerts_v2.json output/email.md
       - name: Scan live company career pages
         run: python remote_radar.py
       - name: Email morning/evening digest through GitHub Issues
@@ -40,22 +45,35 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p state
-          cp output/next_state.json state/seen.json
+          cp output/next_alerts_v2.json state/alerts_v2.json
           git config user.name 'remote-job-radar-bot'
           git config user.email 'remote-job-radar-bot@users.noreply.github.com'
-          git add state/seen.json output/current_24h.csv output/new_jobs.csv output/source_health.csv output/summary.json output/email.md
+          git add state/alerts_v2.json output/current_24h.csv output/new_jobs.csv output/source_health.csv output/role_audit.csv output/unreadable_sources.csv output/raw_jobs_audit.csv output/summary.json output/email.md
           if ! git diff --cached --quiet; then
             git commit -m "Remote radar $(date -u +%Y-%m-%dT%H:%MZ)"
             git pull --rebase origin "${GITHUB_REF_NAME}"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
+      - name: Upload diagnostics even if notification or commit fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: remote-radar-latest-diagnostics
+          path: |
+            output/summary.json
+            output/source_health.csv
+            output/role_audit.csv
+            output/raw_jobs_audit.csv
+            output/unreadable_sources.csv
+          if-no-files-found: ignore
+          retention-days: 14
       - name: Show scan status in GitHub Actions
         if: always()
         shell: bash
         run: |
           if [ -f output/summary.json ]; then
-            echo '## Remote Anywhere Radar — live run' >> "$GITHUB_STEP_SUMMARY"
-            echo '```json' >> "$GITHUB_STEP_SUMMARY"
-            cat output/summary.json >> "$GITHUB_STEP_SUMMARY"
-            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            python health_summary.py >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo '## Scan failed before producing a new report' >> "$GITHUB_STEP_SUMMARY"
+            echo 'No job history was advanced.' >> "$GITHUB_STEP_SUMMARY"
           fi

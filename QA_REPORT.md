@@ -1,9 +1,9 @@
-# Quality assurance — Remote Anywhere Radar
+# QA — Remote Anywhere Radar v2 consolidated
 
-Checked locally with Python standard library and synthetic employer responses.
+- Source: the latest user-run scanner and company configuration, including all prior source fixes and role-audit additions.
+- Unit/integration suite: 77 offline tests, using isolated temporary directories and mocked HTTP provider responses.
+- Test categories: 51-company roster integrity, Greenhouse/Ashby/Lever/Workable/SmartRecruiters/Pinpoint parsing; location and title restrictions; first-publication vs last-publication; 24-hour time boundaries; website JSON-LD; HTML false-empty detection; pagination; malformed boards; total outage; legacy state untouched; v2 alert state; first-run legitimate alerts; no duplicated scans; Issues email idempotence; four-column report; public URL selection; health report.
+- No live ATS HTTP verification for all 51 companies was possible in this execution environment.
+- The first GitHub live run, which can access the company endpoints, is the required integration test. Its per-source health table and a diagnostics artifact are uploaded automatically.
 
-Automated suite covers: 51-company roster and names; all seven title families; rejection of US/Europe/EMEA-only remote positions and unsafe "Anywhere in the US" wording; India and Global eligibility; exactly 24-hour publication boundary; timezone requirements; Greenhouse/Ashby/Lever/Workable payloads; Greenhouse detail-based `first_published` enrichment; HTML/JSON-LD job discovery; ordinary web pages reporting `NEEDS_ADAPTER` instead of pretending zero jobs; duplicate ID behavior; preserving saved state across outages; corrupted-state refusal; no first-run alert flood; scan 1 → scan 2 new job → scan 3 no duplicate; twice-daily India-local issue titles; issue idempotency; and GitHub permissions failure.
-
-**Validation limitation:** This runner cannot access live career-site APIs (network DNS unavailable), and cannot send a GitHub Issue from a user's private account without GitHub authorization. Passing offline tests does not establish 51 live connections or email delivery. The first GitHub run is the real integration test. The health report is the source of truth for live coverage.
-
-No scraping of inaccessible sites, CAPTCHA circumvention, paid services, or invented jobs.
+- GitHub workflow YAML was parsed successfully; its local-time schedule is 08:11/20:11 Asia/Kolkata, and all outputs are isolated from the older international radar.
