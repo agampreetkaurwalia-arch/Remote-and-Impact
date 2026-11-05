@@ -1,11 +1,11 @@
 Company,Status,Adapter,Jobs found,24h matching jobs,Error / limitation,Careers,Matching role titles,Matching India/global location,Matching with usable timestamp
 Appcues,EMPTY,lever,0,0,ATS listing returned zero published jobs,https://jobs.lever.co/appcues-2,0,0,0
 Arkency,ERROR,website,0,0,careers: HTTPError: HTTP Error 404: Not Found,https://arkency.com/careers,0,0,0
-Automattic,OK,greenhouse,12,0,,https://job-boards.greenhouse.io/automatticcareers,1,1,1
+Automattic,OK,greenhouse,11,0,,https://job-boards.greenhouse.io/automatticcareers,1,1,1
 Awesome Motive,OK,discovered workable:awesomemotive,5,0,,https://awesomemotive.com/careers/,0,0,0
 Buffer,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://buffer.com/journey,0,0,0
 Chili Piper,OK,ashby,3,0,,https://jobs.ashbyhq.com/chilipiper,0,0,0
-Constructor,OK,ashby,35,0,,https://jobs.ashbyhq.com/constructor,5,0,0
+Constructor,OK,ashby,39,0,,https://jobs.ashbyhq.com/constructor,5,0,0
 Contra,OK,discovered ashby:contra,7,0,,https://contra.com/careers,2,0,0
 Doist,EMPTY,workable,0,0,ATS listing returned zero published jobs,https://apply.workable.com/doist/,0,0,0
 DuckDuckGo,OK,ashby,10,0,,https://jobs.ashbyhq.com/duck-duck-go,1,0,0
@@ -23,18 +23,18 @@ MeetEdgar,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://meetedgar
 Modash,NEEDS_ADAPTER,website,0,0,"1 job detail links visible, but no usable postings/dates. ",https://www.modash.io/careers,0,0,0
 Namecheap,ERROR,website,0,0,careers: HTTPError: HTTP Error 403: Forbidden,https://www.namecheap.com/careers/,0,0,0
 Omniscient Digital,OK,discovered ashby:omniscient,15,0,,https://beomniscient.com/careers/,3,0,0
-Panopto,NEEDS_ADAPTER,website,0,0,No readable job listings. lever:panopto TimeoutError,https://www.panopto.com/company/careers/,0,0,0
+Panopto,OK,discovered lever:panopto,14,0,,https://www.panopto.com/company/careers/,1,0,0
 Pitch,OK,discovered workable:pitch-software,2,0,,https://pitch.com/jobs,0,0,0
 Plus,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://plusai.com/careers,0,0,0
 Podia,ERROR,website,0,0,careers: HTTPError: HTTP Error 404: Not Found,https://www.podia.com/careers,0,0,0
 Remote,EMPTY,greenhouse,0,0,ATS listing returned zero published jobs,https://job-boards.greenhouse.io/remotecom,0,0,0
-SafetyWing,OK,pinpoint,2,0,,https://safetywing.pinpointhq.com/en,0,0,0
+SafetyWing,OK,pinpoint,3,0,,https://safetywing.pinpointhq.com/en,0,0,0
 ScaleMath,OK,discovered ashby:scalemath,4,0,,https://scalemath.com/careers/,0,0,0
 Scalerrs,NEEDS_ADAPTER,website,0,0,"2 job detail links visible, but no usable postings/dates. ",https://www.scalerrs.co/careers,0,0,0
 Shogun,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://getshogun.com/careers,0,0,0
 SimpleTexting,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://simpletexting.com/careers/,0,0,0
 Smile,OK,discovered lever:Smile.io,1,0,,https://smile.io/careers,0,0,0
-Sporty Group,OK,greenhouse,34,0,,https://job-boards.greenhouse.io/sportygroup,3,2,2
+Sporty Group,OK,greenhouse,33,0,,https://job-boards.greenhouse.io/sportygroup,3,2,2
 Springworks,OK,job-page JSON-LD,2,0,,https://springworks.goodfit.so/,0,0,0
 Storylane,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://www.storylane.io/careers,0,0,0
 TestGorilla,OK,discovered ashby:testgorilla,2,0,,https://www.testgorilla.com/careers/,0,0,0
