@@ -10,6 +10,7 @@ MailerLite,NEEDS_ADAPTER,No readable job listings. ,https://www.mailerlite.com/j
 MeetEdgar,NEEDS_ADAPTER,No readable job listings. ,https://meetedgar.com/careers/
 Modash,NEEDS_ADAPTER,"1 job detail links visible, but no usable postings/dates. ",https://www.modash.io/careers
 Namecheap,ERROR,careers: HTTPError: HTTP Error 403: Forbidden,https://www.namecheap.com/careers/
+Panopto,NEEDS_ADAPTER,No readable job listings. lever:panopto TimeoutError,https://www.panopto.com/company/careers/
 Plus,NEEDS_ADAPTER,No readable job listings. ,https://plusai.com/careers
 Podia,ERROR,careers: HTTPError: HTTP Error 404: Not Found,https://www.podia.com/careers
 Scalerrs,NEEDS_ADAPTER,"2 job detail links visible, but no usable postings/dates. ",https://www.scalerrs.co/careers
