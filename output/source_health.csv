@@ -11,7 +11,7 @@ Doist,EMPTY,workable,0,0,ATS listing returned zero published jobs,https://apply.
 DuckDuckGo,OK,ashby,10,0,,https://jobs.ashbyhq.com/duck-duck-go,1,0,0
 Float,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://www.float.com/careers,0,0,0
 Ghost,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://careers.ghost.org/,0,0,0
-GitLab,DEGRADED,greenhouse,249,0,24 candidate detail requests skipped (12 per-board cap),https://job-boards.greenhouse.io/gitlab,40,1,1
+GitLab,DEGRADED,greenhouse,248,0,26 candidate detail requests skipped (12 per-board cap),https://job-boards.greenhouse.io/gitlab,42,1,1
 Groove,ERROR,website,0,0,careers: HTTPError: HTTP Error 404: Not Found,https://www.groovehq.com/careers,0,0,0
 Kinsta,OK,lever,2,0,,https://jobs.lever.co/kinsta,0,0,0
 Kit,OK,ashby,7,0,,https://jobs.ashbyhq.com/kit,0,0,0
@@ -33,7 +33,7 @@ ScaleMath,OK,discovered ashby:scalemath,4,0,,https://scalemath.com/careers/,0,0,
 Scalerrs,NEEDS_ADAPTER,website,0,0,"2 job detail links visible, but no usable postings/dates. ",https://www.scalerrs.co/careers,0,0,0
 Shogun,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://getshogun.com/careers,0,0,0
 SimpleTexting,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://simpletexting.com/careers/,0,0,0
-Smile,ERROR,website,0,0,careers: HTTPError: HTTP Error 403: Forbidden,https://smile.io/careers,0,0,0
+Smile,OK,discovered lever:Smile.io,1,0,,https://smile.io/careers,0,0,0
 Sporty Group,OK,greenhouse,31,0,,https://job-boards.greenhouse.io/sportygroup,3,2,2
 Springworks,OK,job-page JSON-LD,2,0,,https://springworks.goodfit.so/,0,0,0
 Storylane,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://www.storylane.io/careers,0,0,0
@@ -49,4 +49,4 @@ Zyte,OK,workable,18,0,,https://apply.workable.com/zyte/,2,0,0
 Fingerprint,OK,greenhouse,20,0,,https://job-boards.greenhouse.io/fingerprint,2,0,0
 Strike,OK,greenhouse,5,0,,https://job-boards.greenhouse.io/strike,0,0,0
 Brave,OK,greenhouse,10,0,,https://job-boards.greenhouse.io/brave,0,0,0
-Alpaca,OK,greenhouse,66,0,,https://job-boards.greenhouse.io/alpaca,12,1,1
+Alpaca,OK,greenhouse,68,0,,https://job-boards.greenhouse.io/alpaca,12,1,1
