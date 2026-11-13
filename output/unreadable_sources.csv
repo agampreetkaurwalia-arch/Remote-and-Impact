@@ -15,6 +15,7 @@ Podia,ERROR,careers: HTTPError: HTTP Error 404: Not Found,https://www.podia.com/
 Scalerrs,NEEDS_ADAPTER,"2 job detail links visible, but no usable postings/dates. ",https://www.scalerrs.co/careers
 Shogun,NEEDS_ADAPTER,No readable job listings. ,https://getshogun.com/careers
 SimpleTexting,NEEDS_ADAPTER,No readable job listings. ,https://simpletexting.com/careers/
+Springworks,NEEDS_ADAPTER,No readable job listings. ,https://springworks.goodfit.so/
 Storylane,NEEDS_ADAPTER,No readable job listings. ,https://www.storylane.io/careers
 The Shelf,NEEDS_ADAPTER,"2 job detail links visible, but no usable postings/dates. ",https://www.theshelf.com/careers
 tl;dv,ERROR,careers: HTTPError: HTTP Error 404: Not Found,https://tldv.io/careers/
