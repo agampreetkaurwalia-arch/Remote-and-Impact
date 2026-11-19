@@ -11,7 +11,7 @@ Doist,EMPTY,workable,0,0,ATS listing returned zero published jobs,https://apply.
 DuckDuckGo,OK,ashby,10,0,,https://jobs.ashbyhq.com/duck-duck-go,1,0,0
 Float,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://www.float.com/careers,0,0,0
 Ghost,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://careers.ghost.org/,0,0,0
-GitLab,DEGRADED,greenhouse,249,0,24 candidate detail requests skipped (12 per-board cap),https://job-boards.greenhouse.io/gitlab,40,1,1
+GitLab,DEGRADED,greenhouse,246,0,22 candidate detail requests skipped (12 per-board cap),https://job-boards.greenhouse.io/gitlab,37,1,1
 Groove,ERROR,website,0,0,careers: HTTPError: HTTP Error 404: Not Found,https://www.groovehq.com/careers,0,0,0
 Kinsta,OK,lever,3,0,,https://jobs.lever.co/kinsta,0,0,0
 Kit,OK,ashby,9,0,,https://jobs.ashbyhq.com/kit,0,0,0
