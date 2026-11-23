@@ -28,7 +28,7 @@ Pitch,OK,discovered workable:pitch-software,2,0,,https://pitch.com/jobs,0,0,0
 Plus,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://plusai.com/careers,0,0,0
 Podia,ERROR,website,0,0,careers: HTTPError: HTTP Error 404: Not Found,https://www.podia.com/careers,0,0,0
 Remote,EMPTY,greenhouse,0,0,ATS listing returned zero published jobs,https://job-boards.greenhouse.io/remotecom,0,0,0
-SafetyWing,OK,pinpoint,3,0,,https://safetywing.pinpointhq.com/en,0,0,0
+SafetyWing,OK,pinpoint,4,0,,https://safetywing.pinpointhq.com/en,0,0,0
 ScaleMath,OK,discovered ashby:scalemath,4,0,,https://scalemath.com/careers/,0,0,0
 Scalerrs,NEEDS_ADAPTER,website,0,0,"2 job detail links visible, but no usable postings/dates. ",https://www.scalerrs.co/careers,0,0,0
 Shogun,NEEDS_ADAPTER,website,0,0,No readable job listings. ,https://getshogun.com/careers,0,0,0
