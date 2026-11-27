@@ -102,7 +102,6 @@ GitLab,8926443002,"Customer Success Engineer, India","Remote, India",,2026-11-16
 GitLab,8926445002,"Customer Success Engineer, Singapore","Remote, Singapore",,2026-11-16T01:10:54-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8926445002,greenhouse
 GitLab,8931337002,Customer Success LATAM,"Remote, Brazil; Remote, Mexico",,2026-11-06T17:55:25-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8931337002,greenhouse
 GitLab,8533016002,Customer Success Manager - East ,"Remote, North America",,2026-06-23T17:12:13-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8533016002,greenhouse
-GitLab,8922013002,"Data Scientist, Enterprise Analytics","Remote, Canada; Remote, United States",,2026-10-30T15:59:39-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8922013002,greenhouse
 GitLab,8860273002,"Demo Architect, EMEA","Remote, Germany; Remote, Poland; Remote, United Kingdom",,2026-10-08T11:40:01-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8860273002,greenhouse
 GitLab,8883003002,"Director, Analytics Engineering ","Remote, Canada; Remote, United States",,2026-10-13T10:52:13-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8883003002,greenhouse
 GitLab,8827981002,"Director, FP&A","Remote, United States",,2026-10-13T09:46:46-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8827981002,greenhouse
@@ -124,6 +123,7 @@ GitLab,8478405002,"Engineering Manager, SSCS: Supply Chain","Bangalore, India; R
 GitLab,8586632002,"Engineering Manager, Switchboard","Remote, United Kingdom",,2026-07-13T07:33:45-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8586632002,greenhouse
 GitLab,8640151002,Enterprise Account Executive - Singapore ,"Remote, Singapore",,2026-07-24T01:22:11-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8640151002,greenhouse
 GitLab,8887322002,Enterprise Account Executive - South Korea,"Remote, South Korea",,2026-10-22T06:11:24-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8887322002,greenhouse
+GitLab,8961167002,"Enterprise Applications Engineer, Zendesk","Remote, United States",,2026-11-26T18:18:03-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8961167002,greenhouse
 GitLab,8937764002,"Executive Assistant, Marketing","Remote, Canada; Remote, United States",,2026-11-16T09:52:29-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8937764002,greenhouse
 GitLab,8928552002,"Executive Assistant, Office of the CFO","Remote, United States",,2026-11-06T19:43:56-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8928552002,greenhouse
 GitLab,8940703002,"Executive Assistant, Office of the CTO ","Remote, Canada; Remote, United States",,2026-11-18T19:55:09-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8940703002,greenhouse
@@ -170,10 +170,10 @@ GitLab,8935860002,Principal Revenue Strategist ,"Remote, United States",,2026-11
 GitLab,8927630002,"Principal Security GRC Manager, Legal Assurance (USA)","Remote, United States",,2026-11-05T09:35:04-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8927630002,greenhouse
 GitLab,8731718002,Principal Security Researcher,"Remote, Canada; Remote, Israel; Remote, United Kingdom; Remote, United States",,2026-09-05T13:47:29-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8731718002,greenhouse
 GitLab,8642786002,Principal Strategic Sourcing Lead - Technology,"Remote, United States",,2026-08-10T13:48:11-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8642786002,greenhouse
-GitLab,8693068002,Principal Technical Program Manager,"Remote, Canada; Remote, United States",,2026-08-25T17:56:15-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8693068002,greenhouse
 GitLab,8784056002,Principal Technical Program Manager,"Bangalore, India",,2026-09-08T07:21:57-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8784056002,greenhouse
-GitLab,8957093002,"Professional Services, Program Manager","Remote, Canada",,2026-11-20T14:05:59-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8957093002,greenhouse
+GitLab,8693068002,Principal Technical Program Manager,"Remote, Canada; Remote, United States",,2026-08-25T17:56:15-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8693068002,greenhouse
 GitLab,8929468002,"Professional Services, Program Manager","Remote, United States",,2026-11-06T16:28:11-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8929468002,greenhouse
+GitLab,8957093002,"Professional Services, Program Manager","Remote, Canada",,2026-11-20T14:05:59-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8957093002,greenhouse
 GitLab,8957054002,Professional Services Technical Architect - West,"Remote, Canada",,2026-11-20T13:54:40-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8957054002,greenhouse
 GitLab,8857335002,Professional Services Technical Architect - West ,"Remote, United States",,2026-09-30T14:29:11-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8857335002,greenhouse
 GitLab,8891730002,"Public Sector Account Executive, Canada - Local Governments","Remote, Canada",,2026-11-04T17:26:36-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8891730002,greenhouse
@@ -213,8 +213,9 @@ GitLab,8750842002,"Senior Backend Engineer, Platform Enablement","Remote, United
 GitLab,8918216002,Senior Compensation Manager,"Remote, Canada; Remote, United States",,2026-10-30T12:06:24-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8918216002,greenhouse
 GitLab,8811842002,"Senior Contracts Manager, Commercial (EMEA)","Remote Ireland; Remote, United Kingdom",,2026-09-23T12:27:56-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8811842002,greenhouse
 GitLab,8808549002,"Senior Customer Success Engineer, Japan","Remote, Japan",,2026-09-15T23:23:18-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8808549002,greenhouse
-GitLab,8957066002,Senior CX Platform Engineer,"Remote, Canada",,2026-11-20T13:57:40-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8957066002,greenhouse
 GitLab,8871406002,Senior CX Platform Engineer,"Remote, United States",,2026-10-07T12:49:26-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8871406002,greenhouse
+GitLab,8957066002,Senior CX Platform Engineer,"Remote, Canada",,2026-11-20T13:57:40-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8957066002,greenhouse
+GitLab,8922013002,"Senior Data Scientist, Enterprise Analytics","Remote, Canada; Remote, United States",,2026-10-30T15:59:39-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8922013002,greenhouse
 GitLab,8838202002,Senior Developer Advocate,"Remote, Canada; Remote, United States",,2026-09-23T16:17:55-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8838202002,greenhouse
 GitLab,8862046002,"Senior Director, Global SME Solutions Architecture","Remote, United States",,2026-10-07T12:28:26-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8862046002,greenhouse
 GitLab,8907680002,Senior Ecosystem Operations Manager,"Remote, Canada; Remote, United States",,2026-10-22T12:38:08-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8907680002,greenhouse
@@ -254,8 +255,8 @@ GitLab,8826637002,Senior Solutions Architect- Sydney ,"Remote, Australia",,2026-
 GitLab,8894457002,Senior Solutions Architect - UAE,"Remote, UAE",,2026-10-20T03:37:51-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8894457002,greenhouse
 GitLab,8932489002,"Senior Staff SRE, Architecture Engineering: Hosted Runners","Remote, Canada; Remote, United Kingdom; Remote, United States",,2026-11-17T15:40:35-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8932489002,greenhouse
 GitLab,8742248002,Senior Strategic Account Executive - California ,"Remote, United States",,2026-08-26T14:40:24-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8742248002,greenhouse
-GitLab,8692874002,Senior Support Engineer,"Bangalore, India",,2026-08-18T05:16:27-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8692874002,greenhouse
 GitLab,8692880002,Senior Support Engineer,"Remote, South Korea",,2026-08-18T11:27:32-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8692880002,greenhouse
+GitLab,8692874002,Senior Support Engineer,"Bangalore, India",,2026-08-18T05:16:27-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8692874002,greenhouse
 GitLab,8753656002,Senior Talent Brand Manager,"Remote, Canada; Remote, United States",,2026-09-03T20:25:10-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8753656002,greenhouse
 GitLab,8949468002,Senior TA Operations Specialist,"Remote, United States",,2026-11-23T18:25:08-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8949468002,greenhouse
 GitLab,8937275002,"Senior Threat Research Engineer, Security Factory: Threat Research","Remote, Israel; Remote, Poland; Remote, United Kingdom",,2026-11-24T06:10:33-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8937275002,greenhouse
@@ -284,8 +285,8 @@ GitLab,8781299002,Staff Software Engineer - NLP,"Bangalore, India",,2026-09-24T0
 GitLab,8693563002,"Staff Software Engineer, Security Factory: Static Analysis","Remote, Canada; Remote, Israel; Remote, United Kingdom; Remote, United States",,2026-10-09T20:28:56-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8693563002,greenhouse
 GitLab,8632446002,"Staff Software Engineer, Security Foundations","Bangalore, India",,2026-08-24T18:47:00-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8632446002,greenhouse
 GitLab,8930224002,"Staff Software Engineer, Security Platform: Authentication","Bangalore, India",,2026-11-10T22:03:12-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8930224002,greenhouse
-GitLab,8860196002,"Staff Solutions Architect, AI Subject Matter Expert","Remote, France; Remote, Germany; Remote, Netherlands; Remote, Spain; Remote, United Kingdom",,2026-10-16T13:04:28-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8860196002,greenhouse
 GitLab,8886426002,"Staff Solutions Architect, AI Subject Matter Expert","Remote, United States",,2026-10-16T11:58:55-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8886426002,greenhouse
+GitLab,8860196002,"Staff Solutions Architect, AI Subject Matter Expert","Remote, France; Remote, Germany; Remote, Netherlands; Remote, Spain; Remote, United Kingdom",,2026-10-16T13:04:28-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8860196002,greenhouse
 GitLab,8922693002,Staff Technical Writer ,"Remote, Canada; Remote, Poland; Remote, United Kingdom; Remote, United States",,2026-11-16T17:28:52-05:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8922693002,greenhouse
 GitLab,8860106002,Strategic Account Executive,"Remote, Germany",,2026-10-02T13:47:21-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8860106002,greenhouse
 GitLab,8895523002,"Strategic Account Executive - AI, San Francisco   ","Remote, United States",,2026-10-23T12:57:41-04:00,first_published,https://job-boards.greenhouse.io/gitlab/jobs/8895523002,greenhouse
@@ -318,7 +319,12 @@ Kit,cecc518c-2f11-433f-9f75-e9960330ccb9,Senior Analytics Engineer,Remote,Remote
 Kit,e3dee9f6-92f1-42c2-b93b-d983d17281a3,Senior Product Marketing Manager,Remote,Remote,2026-11-11T18:23:37.052+00:00,last_published,https://jobs.ashbyhq.com/kit/e3dee9f6-92f1-42c2-b93b-d983d17281a3,ashby
 Kit,2c1f9af8-0835-4f95-bf14-42730e5c1b67,Senior Product Designer - Product Growth,Remote,Remote,2026-11-16T18:54:09.190+00:00,last_published,https://jobs.ashbyhq.com/kit/2c1f9af8-0835-4f95-bf14-42730e5c1b67,ashby
 Kit,e4cef437-3275-4bfd-9923-2bf386667fb6,"Senior Software Engineer II, Agentic Apps",Remote,Remote,2026-11-24T22:06:45.282+00:00,last_published,https://jobs.ashbyhq.com/kit/e4cef437-3275-4bfd-9923-2bf386667fb6,ashby
-John Snow Labs,744000163750159,"Healthcare Data Scientist (Remote, International","Remote Remote, us",Remote,2026-11-25T18:57:13.367Z,smartrecruiters_releasedDate,https://jobs.smartrecruiters.com/JohnSnowLabs/744000163750159,smartrecruiters
+John Snow Labs,744000163923649,"Healthcare Data Scientist (Remote, International)","Remote Remote, tm",Remote,2026-11-26T19:53:32.967Z,smartrecruiters_releasedDate,https://jobs.smartrecruiters.com/JohnSnowLabs/744000163923649,smartrecruiters
+John Snow Labs,744000163922929,"Healthcare Data Scientist (Remote, International)","Remote Remote, es",Remote,2026-11-26T19:41:02.950Z,smartrecruiters_releasedDate,https://jobs.smartrecruiters.com/JohnSnowLabs/744000163922929,smartrecruiters
+John Snow Labs,744000163922634,"Healthcare Data Scientist (Remote, International)","Remote Remote, pl",Remote,2026-11-26T19:37:05.341Z,smartrecruiters_releasedDate,https://jobs.smartrecruiters.com/JohnSnowLabs/744000163922634,smartrecruiters
+John Snow Labs,744000163922429,"Healthcare Data Scientist (Remote, International)","Remote Remote, us",Remote,2026-11-26T19:33:52.461Z,smartrecruiters_releasedDate,https://jobs.smartrecruiters.com/JohnSnowLabs/744000163922429,smartrecruiters
+John Snow Labs,744000163921649,"Healthcare Data Scientist (Remote, International)","Remote Remote, de",Remote,2026-11-26T19:26:05.773Z,smartrecruiters_releasedDate,https://jobs.smartrecruiters.com/JohnSnowLabs/744000163921649,smartrecruiters
+John Snow Labs,744000163918439,"Healthcare Data Scientist (Remote, International)","Remote Remote, gb",Remote,2026-11-26T18:53:23.198Z,smartrecruiters_releasedDate,https://jobs.smartrecruiters.com/JohnSnowLabs/744000163918439,smartrecruiters
 John Snow Labs,744000152449053,Certified Tumor Registrar (Part-Time Consultant / Domain Advisor),"Remote Remote, us",Remote,2026-09-29T13:56:14.198Z,smartrecruiters_releasedDate,https://jobs.smartrecruiters.com/JohnSnowLabs/744000152449053,smartrecruiters
 John Snow Labs,744000130100930,Healthcare Data Integration Engineer (FHIR / OMOP),"Remote Remote, us",Remote,2026-06-03T22:43:22.079Z,smartrecruiters_releasedDate,https://jobs.smartrecruiters.com/JohnSnowLabs/744000130100930,smartrecruiters
 John Snow Labs,744000077670430,Machine Learning Engineer - Large Language Models,"Remote Remote, un",Remote,2025-08-22T14:24:23.357Z,smartrecruiters_releasedDate,https://jobs.smartrecruiters.com/JohnSnowLabs/744000077670430,smartrecruiters
@@ -373,7 +379,7 @@ Sporty Group,4911824101,"Data Scientist (Europe, Asia)",Global - Remote,,2026-06
 Sporty Group,5044500101,Facilities Manager - Sporty Group (Onsite),Cape Town,,2026-11-23T08:42:15-05:00,first_published,https://job-boards.eu.greenhouse.io/sportygroup/jobs/5044500101,greenhouse
 Sporty Group,4969045101,Finance Controller / Internal Auditor (Hybrid),Cape Town,,2026-09-08T05:40:41-04:00,first_published,https://job-boards.eu.greenhouse.io/sportygroup/jobs/4969045101,greenhouse
 Sporty Group,4937176101,Frontend Engineering Team Lead - MarTech,Europe - Remote,,2026-07-28T05:07:18-04:00,first_published,https://job-boards.eu.greenhouse.io/sportygroup/jobs/4937176101,greenhouse
-Sporty Group,5041600101,Full-Stack Engineer Central Engineering,EMEA,,2026-11-23T10:37:44-05:00,first_published,https://job-boards.eu.greenhouse.io/sportygroup/jobs/5041600101,greenhouse
+Sporty Group,5041600101,Full-Stack Engineer ,EMEA,,2026-11-23T10:37:44-05:00,first_published,https://job-boards.eu.greenhouse.io/sportygroup/jobs/5041600101,greenhouse
 Sporty Group,4903090101,Interested in working for Sporty?,GLOBAL,,2026-06-18T21:02:31-04:00,first_published,https://job-boards.eu.greenhouse.io/sportygroup/jobs/4903090101,greenhouse
 Sporty Group,5037074101,Lead Full-stack Engineer,EMEA,,2026-11-18T11:32:10-05:00,first_published,https://job-boards.eu.greenhouse.io/sportygroup/jobs/5037074101,greenhouse
 Sporty Group,4951687101,Lead Hybrid QA Engineer ,Europe - Remote,,2026-08-12T11:01:30-04:00,first_published,https://job-boards.eu.greenhouse.io/sportygroup/jobs/4951687101,greenhouse
@@ -495,6 +501,7 @@ Alpaca,6231661004,Senior Cashiering Associate,Remote - Americas,,2026-10-23T00:2
 Alpaca,6268426004,Senior Customer Success Manager,Remote - EMEA,,2026-11-26T10:01:30-05:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6268426004,greenhouse
 Alpaca,6167239004,Senior Data Platform Engineer,Remote - Americas ,,2026-09-09T08:11:29-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6167239004,greenhouse
 Alpaca,6147548004,Senior Data Scientist AI Evaluation,Remote - Americas ,,2026-10-07T11:55:18-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6147548004,greenhouse
+Alpaca,6208691004,"Senior Data Scientist, Growth",Remote - Americas ,,2026-09-25T16:01:36-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6208691004,greenhouse
 Alpaca,6265262004,"Senior Data Scientist, Research",Remote - Americas ,,2026-11-19T14:13:14-05:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6265262004,greenhouse
 Alpaca,6186916004,Senior DevOps Engineer,Remote - Japan - APAC,,2026-10-20T07:33:25-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6186916004,greenhouse
 Alpaca,6162101004,Senior Full-Stack Engineer - Alpaca Connect,Remote - North America - South America - Europe,,2026-08-28T10:41:57-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6162101004,greenhouse
@@ -508,8 +515,8 @@ Alpaca,6131171004,Senior Site Reliability Engineer  ,Remote - Global,,2026-08-05
 Alpaca,6186847004,Senior Site Reliability Engineer - APAC,Remote - APAC,,2026-10-21T10:03:15-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6186847004,greenhouse
 Alpaca,6237975004,Senior Software Engineer – Agent Developer Platform,"Remote - Europe, Americas",,2026-10-28T16:21:39-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6237975004,greenhouse
 Alpaca,6237960004,Senior Software Engineer – Agent Experiences,"Remote - Americas, Europe",,2026-10-28T15:34:28-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6237960004,greenhouse
-Alpaca,6207222004,Senior Software Engineer - Clearing,Remote - Europe or Remote America,,2026-09-24T10:10:25-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6207222004,greenhouse
 Alpaca,5985818004,Senior Software Engineer - Clearing,Remote - Europe,,2026-05-04T22:46:46-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/5985818004,greenhouse
+Alpaca,6207222004,Senior Software Engineer - Clearing,Remote - Europe or Remote America,,2026-09-24T10:10:25-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6207222004,greenhouse
 Alpaca,6262786004,Senior Software Engineer – Developer Platform,"Remote - Europe, Americas",,2026-11-16T14:45:08-05:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6262786004,greenhouse
 Alpaca,6238474004,Senior Software Engineer - Financial Crimes,"Remote - Americas, Europe",,2026-11-02T10:07:10-05:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6238474004,greenhouse
 Alpaca,6231747004,Senior Software Engineer - Identity,Remote Americas,,2026-10-22T22:08:34-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6231747004,greenhouse
@@ -523,7 +530,6 @@ Alpaca,6194973004,Software Engineer - Core Trading,Remote - Americas or EU,,2026
 Alpaca,6195696004,Software Engineer - Crypto,Remote - EU - LATAM - NA ,,2026-09-21T13:21:54-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6195696004,greenhouse
 Alpaca,6144564004,Software Engineer - Market Data,Remote - EMEA,,2026-08-18T01:02:49-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6144564004,greenhouse
 Alpaca,6207262004,"Software Engineer, Securities Finance",Remote - Americas,,2026-10-13T20:48:38-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6207262004,greenhouse
-Alpaca,6208691004,"Staff Data Scientist, Growth",Remote - Americas ,,2026-09-25T16:01:36-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6208691004,greenhouse
 Alpaca,6217885004,Staff Software Engineer - Corporate Actions & Security Master,Remote - North America and Europe,,2026-10-06T11:59:55-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6217885004,greenhouse
 Alpaca,6112042004,Staff Software Engineer - New Markets Japan,Remote - Japan,,2026-07-08T16:35:31-04:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6112042004,greenhouse
 Alpaca,6172699004,Staff Software Engineer - New Markets Singapore/SEA,"Remote - Singapore, Remote - APAC",,2026-11-09T23:34:04-05:00,first_published,https://job-boards.greenhouse.io/alpaca/jobs/6172699004,greenhouse
