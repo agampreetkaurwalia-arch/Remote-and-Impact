@@ -1,4 +1,4 @@
-# Remote Anywhere Radar — 27 Nov 2026, 09:09 PM IST
+# Remote Anywhere Radar — 28 Nov 2026, 09:05 AM IST
 
 | Company | Role | Posted within 24 hours | Work location |
 |---|---|---|---|
